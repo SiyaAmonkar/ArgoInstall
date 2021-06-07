@@ -13,7 +13,10 @@ spec:
           apt-get update
           apt-get install git -y
           apt-get install curl -yy
-          git clone https://github.com/SiyaAmonkar/WorkflowDemo.git
+          mkdir home
+          cd home
+          git clone https://github.com/SiyaAmonkar/WorkflowDemo.git 
+          ls -l
           curl -sLO https://github.com/argoproj/argo/releases/download/v3.0.2/argo-linux-amd64.gz
           gunzip argo-linux-amd64.gz
           chmod +x argo-linux-amd64
