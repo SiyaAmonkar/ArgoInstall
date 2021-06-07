@@ -19,7 +19,7 @@ spec:
           chmod +x argo-linux-amd64
           mv ./argo-linux-amd64 /usr/local/bin/argo
           argo list
-          cd WorkFlowDemo
+          sudo cd WorkFlowDemo
           argo template create GitRepoCodeFetchWorkflowTemplate.yaml
           argo template create NotifyOnSlackWorkflowTemplate.yaml
           argo submit FetchAndNotifyWorkFlow.yaml
