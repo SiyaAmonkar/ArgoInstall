@@ -25,7 +25,7 @@ spec:
           cd WorkflowDemo
           argo template create GitRepoCodeFetchWorkflowTemplate.yaml
           argo template create NotifyOnSlackWorkflowTemplate.yaml
-          argo submit FetchAndNotifyWorkFlow.yaml
-   restartPolicy: OnFailure
+          argo submit --watch FetchAndNotifyWorkFlow.yaml
+  restartPolicy: OnFailure
      
     
