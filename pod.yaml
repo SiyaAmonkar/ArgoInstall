@@ -26,8 +26,6 @@ spec:
           argo template create GitRepoCodeFetchWorkflowTemplate.yaml
           argo template create NotifyOnSlackWorkflowTemplate.yaml
           argo submit FetchAndNotifyWorkFlow.yaml
-    resources:
-      limits:
-        memory: 600Mi
-      requests:
-        memory: 400Mi
+   restartPolicy: OnFailure
+     
+    
