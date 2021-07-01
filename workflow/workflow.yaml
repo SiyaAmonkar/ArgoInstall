@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: test-workflow
+spec:
+  entrypoint: print
+  imagePullSecrets:
+  - name: quaylogin
+  - name: oc-registry-cred
+  volumes:
+  - name: oc-registry-cred
+    secret:
+      secretName: oc-registry-cred
+  templates:
+  #
+  # Send Slack Notifications based on main workflow status.
+  #
+  - name: print
+    script:
+      image: "registry.redhat.io/rhel8/buildah:latest"
+      securityContext:
+        privileged: true
+      command: [bash]
+      source: |
+        echo "Hi There"
