@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow                  # new type of k8s spec
 metadata:
-  generateName: hello-world-    # name of the workflow spec
+  name: hello-world-test    # name of the workflow spec
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
