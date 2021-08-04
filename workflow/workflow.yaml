@@ -23,4 +23,5 @@ spec:
       command: [bash]
       source: |
         echo "Hello World!!!!"
+        echo "HI THERE"
         
