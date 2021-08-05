@@ -1,9 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: my-job-
-  annotations:
-    argocd.argoproj.io/hook: Sync
+  name: my-job
 spec:
   entrypoint: print
   imagePullSecrets:
