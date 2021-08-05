@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: cleanup-workflow-template
+  generateName: cleanup-workflow-template
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 spec:
