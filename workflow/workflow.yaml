@@ -1,7 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  name: test-workflow
+  generateName: my-job-
+  annotations:
+    argocd.argoproj.io/hook: Sync
 spec:
   entrypoint: print
   imagePullSecrets:
@@ -22,6 +24,6 @@ spec:
         privileged: true
       command: [bash]
       source: |
-        echo "Hello World!!!!"
+        echo "Hello Goa!!!!"
         echo "HI THERE"
         
