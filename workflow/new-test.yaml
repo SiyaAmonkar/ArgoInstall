@@ -23,5 +23,5 @@ spec:
       command: [bash]
       source: |
         echo "Hello GOA!!!!"
-        echo "HI THERE"
+        echo "HI"
         
