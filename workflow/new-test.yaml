@@ -1,9 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: test-workflow-
-  annotations:
-    argocd.argoproj.io/hook: PreSync
+  name: test-workflow-test
 spec:
   entrypoint: print
   imagePullSecrets:
