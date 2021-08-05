@@ -41,4 +41,4 @@ spec:
         PATH=$HOME/bin:$PATH
         echo "Testing out argo"
         argo list
-        argo delete my-job
+        argo delete my-job -n dllehr
